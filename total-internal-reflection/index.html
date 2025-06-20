@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive AVA Prototype</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Mitr"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/latin-modern-math"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/diagramatics@1.5/css/diagramatics.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Interactive AVA Prototype (Total Internal Reflection)</h1>
+    </header>
+    <article>
+      <div class="box">
+        <p>
+          เรื่องของการสะท้อนกลับหมดภายในเป็นหัวข้อที่ไม่ยาก แต่มีจุดที่น้อง ๆ
+          มักจะเข้าใจผิดกัน ใน Guided Practice ชุดนี้
+          เราจะมาทบทวนและทำความเข้าใจเรื่องนี้ให้ถูกต้องกันครับ
+        </p>
+      </div>
+      <div class="box">
+        <h2>Question 1</h2>
+        <p>
+          โดยทั่วไปแล้วเมื่อแสงเคลื่อนที่ไปเจอแนวรอยต่อระหว่างตัวกลาง
+          ข้อใดกล่าวถูกต้อง
+        </p>
+        <p>
+          1. แสงทั้งหมดจะหักเหผ่านรอยต่อไปหาตัวกลางใหม่ <br />
+          2. แสงทั้งหมดจะสะท้อนกลับมาในตัวกลางเดิม <br />
+          3. แสงสามารถมีบางส่วนที่หักเห
+          และบางส่วนที่สะท้อนกลับได้พร้อมกันในเวลาเดียวกัน
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          ตอบ 3. แสงสามารถมีบางส่วนที่หักเห
+          และบางส่วนที่สะท้อนกลับได้พร้อมกันในเวลาเดียวกัน <br />
+          <br />
+          คำอธิบาย <br />
+          ความเข้าใจผิดแรกของหลาย ๆ คนคือ
+          การคิดว่าแสงจะต้องหักเหหรือสะท้อนเพียงอย่างใดอย่างหนึ่ง
+          แต่ในความเป็นจริงแล้ว แสงสามารถมีบางส่วนที่หักเห
+          และบางส่วนที่สะท้อนได้พร้อมกันในเวลาเดียวกัน
+        </p>
+        <div class="diagram">
+          <svg class="svg" id="diagram1"></svg>
+          <div class="control" id="control1"></div>
+        </div>
+        <p>
+          จาก Interactive Diagram ด้านบน
+          นอกจากจะแสดงให้เห็นการหักเหและสะท้อนพร้อม ๆ กันแล้ว ถ้าน้อง ๆ
+          ลองปรับมุมที่ยิงแสงไปตกกระทบดู จะพบว่าเมื่อมุมเปลี่ยน
+          ปริมาณของแสงส่วนที่หักเหและสะท้อนก็จะเปลี่ยนไปด้วย
+          (สังเกตได้จากความเข้มของแสง)
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          ความน่าสนใจของเรื่องนี้จะเกิดขึ้นเมื่อเราให้แสงเดินทางจากตัวกลางที่มีดรรชนีหักเหมาก
+          เช่น น้ำ ไปยังตัวกลางที่มีดรรชนีหักเหน้อยกว่า เช่น อากาศ <br />
+          <br />
+          ในกรณีแบบนี้ถ้าปรับมุมตกกระทบไปเรื่อย ๆ
+          เราจะพบว่ามีบางช่วงซึ่งไม่มีแสงส่วนใดหักเหผ่านแนวรอยต่อไปได้เลย
+          และแสงทั้งหมดจะสะท้อนกลับมาในตัวกลางเดิม เหตุการณ์แบบนี้เรียกว่า
+          <b>การสะท้อนกลับหมดภายใน</b>
+        </p>
+        <div class="diagram">
+          <svg class="svg" id="diagram2"></svg>
+          <div class="control" id="control2"></div>
+        </div>
+      </div>
+      <div class="box">
+        <h2>Question 2</h2>
+        <p>
+          ข้อใดคือเงื่อนไขที่ทำให้เกิดการสะท้อนกลับหมดภายใน<br />
+          A : เกิดเมื่อมุมตกกระทบมากกว่า "มุมวิกฤต"
+          <br />
+          B : เกิดเมื่อมุมตกกระทบน้อยกว่า "มุมวิกฤต"
+          <br />
+          C : "มุมวิกฤต" คือมุมตกกระทบที่ทำให้มุมหักเหมีค่าเท่ากับ $90$ องศา
+          <br />
+          D : "มุมวิกฤต" คือมุมตกกระทบที่มีค่าเท่ากับ $90$ องศา <br />
+          <br />
+          1. A และ C
+          <br />
+          2. A และ D
+          <br />
+          3. B และ C <br />
+          4. B และ D
+          <br />
+          <br />
+          น้อง ๆ สามารถใช้ Interactive Diagram
+          ด้านล่างช่วยในการหาคำตอบได้เต็มที่ครับ
+        </p>
+        <div class="diagram">
+          <svg class="svg" id="diagram3"></svg>
+          <div class="control" id="control3"></div>
+        </div>
+      </div>
+      <div class="box">
+        <p>
+          ตอบ 1. A และ C <br />
+          <br />
+          คำอธิบาย <br />
+          จาก Interactive Diagram จะเห็นว่าเมื่อเพิ่มมุมตกกระทบขึ้นเรื่อย ๆ
+          แสงส่วนที่หักเหจะน้อยลง ในขณะที่แสงส่วนที่สะท้อนเพิ่มมากขึ้น
+          จนมุมตกกระทบมากถึงจุดหนึ่งที่เรียกว่า "มุมวิกฤต"
+          ที่จุดนี้จะไม่เหลือแสงส่วนที่หักเหอีก และหากยังคงเพิ่มมุมตกกระทบต่อไป
+          แสงก็จะเกิดการสะท้อนกลับหมดภายในตัวกลางนั่นเอง <br />
+          นอกจากนี้จะเห็นว่าในขณะที่มุมตกกระทบเท่ากับมุมวิกฤตพอดี
+          มุมหักเหที่เกิดขึ้นจะมีค่าเท่ากับ $90$ องศา ซึ่งเป็นสิ่งที่น้อง ๆ
+          จะต้องจำได้เพื่อนำไปใช้ต่อในเรื่องของการคำนวณนะครับ
+        </p>
+      </div>
+      <div class="box">
+        <h2>Question 3</h2>
+        <p>
+          ก่อนหน้านี้เราได้ทดลองให้แสงเคลื่อนที่จากตัวกลางที่มีดรรชนีหักเหมาก
+          ไปยังตัวกลางที่มีดรรชนีหักเหน้อยกว่า
+          หากเราลองเปลี่ยนมายิงแสงจากตัวกลางที่มีดรรชนีหักเหน้อย
+          ไปยังตัวกลางที่มีดรรชนีหักเหมากกว่าบ้าง (เช่น ยิงจากอากาศลงน้ำ)
+          จะเกิดการสะท้อนกลับหมดภายในได้หรือไม่ เพราะเหตุใด <br />
+          1. ได้ <br />
+          2. ไม่ได้ <br />
+          <br />
+          เหมือนเดิมครับ น้อง ๆ สามารถใช้ Interactive Diagram
+          ช่วยในการหาคำตอบได้
+        </p>
+        <div class="diagram">
+          <svg class="svg" id="diagram4"></svg>
+          <div class="control" id="control4"></div>
+        </div>
+      </div>
+      <div class="box">
+        <p>
+          ตอบ 2. ไม่ได้ <br />
+          <br />
+          คำอธิบาย <br />
+          การจะเกิดการสะท้อนกลับหมดได้
+          จะต้องเพิ่มมุมตกกระทบให้มากพอที่มุกหักเหจะเป็น $90$ องศาได้
+          (เกิดมุมวิกฤตได้) แต่ในกรณีนี้
+          สังเกตได้ว่ามุมหักเหจะน้อยกว่ามุมตกกระทบเสมอ
+          ทำให้แม้ว่าจะเพิ่มมุมตกกระทบแบบสุด ๆ เป็น $90$ องศา
+          มุมหักเหก็จะยังมีค่าไม่ถึง $90$ องศา อยู่ดี
+        </p>
+      </div>
+    </article>
+  </body>
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+      },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script type="module">
+    import * as dg from "https://cdn.jsdelivr.net/npm/diagramatics@latest/dist/diagramatics.js";
+
+    // handle MathJax
+    let handletex = (str, conf) => {
+      return MathJax.tex2svg(str, conf).innerHTML;
+    };
+
+    // define the `draw` function
+    let draw = (svgElement, ...diagrams) => {
+      dg.draw_to_svg(svgElement, dg.diagram_combine(...diagrams));
+    };
+
+    // shared parameters
+    let radius = 0.4;
+    let waterRefracIndex = 1.333;
+    let airRefracIndex = 1;
+
+    // shared diagram components
+    let water = dg
+      .rectangle(1, 0.5)
+      .stroke("none")
+      .fill("lightblue")
+      .position(dg.V2(0, -0.25));
+    let air = dg
+      .rectangle(1, 0.5)
+      .stroke("none")
+      .fill("white")
+      .position(dg.V2(0, 0.25));
+    let boundary = dg
+      .line(dg.V2(-0.5, 0), dg.V2(0.5, 0))
+      .strokewidth(1)
+      .stroke("black");
+    let sceneStatic = dg.diagram_combine(water, air, boundary);
+    let normalLine = dg
+      .line(dg.V2(0, 0.38), dg.V2(0, -0.45))
+      .strokedasharray([10, 14])
+      .strokewidth(1);
+    let incidentRay = dg
+      .line(dg.V2(0, 0), dg.V2(0, -radius))
+      .strokewidth(4)
+      .stroke("orange");
+    let refracRay = dg
+      .arrow1(dg.V2(0, 0), dg.V2(0, radius), 0.02)
+      .strokewidth(4)
+      .stroke("orange")
+      .fill("orange");
+    let reflecRay = dg
+      .arrow1(dg.V2(0, 0), dg.V2(0, -radius), 0.02)
+      .strokewidth(4)
+      .stroke("orange")
+      .fill("orange");
+    let laserPointerBody = dg
+      .rectangle(0.05, 0.12)
+      .fill("white")
+      .apply(dg.mod.round_corner(0.01));
+    let laserPointerEmitter = dg
+      .rectangle(0.025, 0.018)
+      .fill("black")
+      .position(dg.V2(0, 0.06));
+    let laserPointer = dg
+      .diagram_combine(laserPointerEmitter, laserPointerBody)
+      .move_origin(dg.V2(0, 0));
+    let generateTrack = (startAngle, endAngle, nSteps, targetAngle) => {
+      let points = [];
+      let targetIsAdded = false;
+      for (let i = 0; i <= nSteps; i++) {
+        let currentAngle = startAngle + (i * (endAngle - startAngle)) / nSteps;
+        if (currentAngle > targetAngle && targetIsAdded == false) {
+          points.push(
+            dg.V2(
+              radius * Math.cos(targetAngle),
+              radius * Math.sin(targetAngle)
+            )
+          );
+          targetIsAdded = true;
+        }
+        points.push(
+          dg.V2(
+            radius * Math.cos(currentAngle),
+            radius * Math.sin(currentAngle)
+          )
+        );
+      }
+      return dg.curve(points);
+    };
+    let waterTrack = generateTrack(
+      1.0005 * Math.PI,
+      1.4995 * Math.PI,
+      120,
+      1.22997 * Math.PI
+    );
+    let airTrack = generateTrack(
+      0.5005 * Math.PI,
+      0.9995 * Math.PI,
+      120,
+      0.75 * Math.PI
+    );
+    let airTrackLimited = generateTrack(
+      0.8505 * Math.PI,
+      0.97 * Math.PI,
+      120,
+      0.9 * Math.PI
+    );
+    let refracLabel = dg
+      .text("หักเห")
+      .fontsize("18")
+      .move_origin(dg.V2(-0.2, -0.03))
+      .position(dg.V2(0, 0));
+    let reflecLabel = dg
+      .text("สะท้อน")
+      .fontsize("18")
+      .move_origin(dg.V2(-0.2, -0.03))
+      .position(dg.V2(0, 0));
+    let tirAlert = dg
+      .text("สะท้อนกลับหมด !!!")
+      .fontsize("18")
+      .textfill("red")
+      .position(dg.V2(0, 0.44));
+    let critLabel = dg.diagram_combine(
+      dg
+        .text("มุมวิกฤต")
+        .fontsize("18")
+        .textfill("red")
+        .position(dg.V2(-0.08, -0.16))
+    );
+
+    // --------------------- diagram 1 ------------------------- //
+    let diagram1 = document.getElementById("diagram1");
+    let control1 = document.getElementById("control1");
+    let interactive1 = new dg.Interactive(control1, diagram1);
+    interactive1.draw_function = (inp) => {
+      let p = inp["p"];
+      // snell's law calculation
+      let incidentAngle = Math.atan2(-p.x, p.y);
+      let refracAngle = Math.asin(
+        Math.sin(incidentAngle) * (airRefracIndex / waterRefracIndex)
+      );
+      // fresnel calculation assuming laser light is S-polarized relative to the plane of incident
+      let reflectance = Math.pow(
+        (airRefracIndex * Math.cos(incidentAngle) -
+          waterRefracIndex * Math.cos(refracAngle)) /
+          (airRefracIndex * Math.cos(incidentAngle) +
+            waterRefracIndex * Math.cos(refracAngle)),
+        2
+      );
+      let transmittance = 1 - reflectance;
+      // draw the diagram
+      draw(
+        diagram1,
+        sceneStatic,
+        incidentRay.rotate(Math.PI + incidentAngle),
+        refracRay.rotate(Math.PI + refracAngle).opacity(transmittance),
+        reflecRay.rotate(Math.PI - incidentAngle).opacity(reflectance),
+        laserPointer.position(p).rotate(Math.PI + incidentAngle),
+        refracLabel
+          .rotate(-Math.PI / 2 + refracAngle)
+          .textangle(Math.PI / 2 - refracAngle),
+        reflecLabel
+          .rotate(Math.PI / 2 - incidentAngle)
+          .textangle(-Math.PI / 2 + incidentAngle)
+      );
+    };
+    interactive1.locator(
+      "p",
+      dg.V2(
+        -radius * Math.sin(dg.to_radian(82)),
+        radius * Math.cos(dg.to_radian(82))
+      ),
+      0.05,
+      "blue",
+      airTrackLimited,
+      true
+    );
+    interactive1.draw();
+    interactive1.locator_initial_draw();
+
+    // --------------------- diagram 2 ------------------------- //
+    let diagram2 = document.getElementById("diagram2");
+    let control2 = document.getElementById("control2");
+    let interactive2 = new dg.Interactive(control2, diagram2);
+    interactive2.draw_function = (inp) => {
+      let p = inp["p"];
+      // snell's law calculation
+      let incidentAngle = Math.atan2(-p.x, -p.y);
+      let refracAngle = Math.asin(
+        Math.sin(incidentAngle) * (waterRefracIndex / airRefracIndex)
+      );
+      // fresnel calculation assuming laser light is S-polarized relative to the plane of incident
+      let reflectance = Math.pow(
+        (waterRefracIndex * Math.cos(incidentAngle) -
+          airRefracIndex * Math.cos(refracAngle)) /
+          (waterRefracIndex * Math.cos(incidentAngle) +
+            airRefracIndex * Math.cos(refracAngle)),
+        2
+      );
+      let transmittance = 1 - reflectance;
+      // angle annotation
+      let incidentAnno = dg.annotation
+        .angle(
+          [p, dg.V2(0, 0), dg.V2(0, -1)],
+          dg.to_degree(incidentAngle).toFixed(0).toString() + "°",
+          0.1,
+          0.06
+        )
+        .strokewidth(1);
+      let refracAnno = dg.annotation
+        .angle(
+          [
+            dg.V2(Math.sin(refracAngle), Math.cos(refracAngle)),
+            dg.V2(0, 0),
+            dg.V2(0, 1),
+          ],
+          dg.to_degree(refracAngle).toFixed(0).toString() + "°",
+          0.1,
+          0.06
+        )
+        .strokewidth(1);
+      if (Number.isNaN(refracAngle)) {
+        refracAnno = refracAnno.opacity(0);
+        tirAlert = tirAlert.opacity(1);
+      } else {
+        tirAlert = tirAlert.opacity(0);
+      }
+      // draw the diagram
+      draw(
+        diagram2,
+        sceneStatic,
+        incidentRay.rotate(-incidentAngle),
+        refracRay.rotate(-refracAngle).opacity(transmittance),
+        reflecRay.rotate(incidentAngle).opacity(reflectance),
+        laserPointer.position(p).rotate(-incidentAngle),
+        tirAlert
+      );
+    };
+    interactive2.locator(
+      "p",
+      dg.V2(
+        -radius * Math.sin(dg.to_radian(45)),
+        -radius * Math.cos(dg.to_radian(45))
+      ),
+      0.05,
+      "blue",
+      waterTrack,
+      true
+    );
+    interactive2.draw();
+    interactive2.locator_initial_draw();
+
+    // --------------------- diagram 3 ------------------------- //
+    let diagram3 = document.getElementById("diagram3");
+    let control3 = document.getElementById("control3");
+    let interactive3 = new dg.Interactive(control3, diagram3);
+    interactive3.draw_function = (inp) => {
+      let p = inp["p"];
+      // snell's law calculation
+      let incidentAngle = Math.atan2(-p.x, -p.y);
+      let refracAngle = Math.asin(
+        Math.sin(incidentAngle) * (waterRefracIndex / airRefracIndex)
+      );
+      // fresnel calculation assuming laser light is S-polarized relative to the plane of incident
+      let reflectance = Math.pow(
+        (waterRefracIndex * Math.cos(incidentAngle) -
+          airRefracIndex * Math.cos(refracAngle)) /
+          (waterRefracIndex * Math.cos(incidentAngle) +
+            airRefracIndex * Math.cos(refracAngle)),
+        2
+      );
+      let transmittance = 1 - reflectance;
+      // angle annotation
+      let incidentAnno = dg.annotation
+        .angle(
+          [p, dg.V2(0, 0), dg.V2(0, -1)],
+          dg.to_degree(incidentAngle).toFixed(0).toString() + "°",
+          0.1,
+          0.06
+        )
+        .strokewidth(1);
+      let refracAnno = dg.annotation
+        .angle(
+          [
+            dg.V2(Math.sin(refracAngle), Math.cos(refracAngle)),
+            dg.V2(0, 0),
+            dg.V2(0, 1),
+          ],
+          dg.to_degree(refracAngle).toFixed(0).toString() + "°",
+          0.1,
+          0.06
+        )
+        .strokewidth(1);
+      if (Number.isNaN(refracAngle)) {
+        refracAnno = refracAnno.opacity(0);
+        tirAlert = tirAlert.opacity(1);
+      } else {
+        tirAlert = tirAlert.opacity(0);
+      }
+      if (Math.abs(incidentAngle - dg.to_radian(48.6)) < 0.0005) {
+        incidentAnno = incidentAnno.fill("red");
+        critLabel = critLabel.opacity(1);
+      } else {
+        critLabel = critLabel.opacity(0);
+      }
+      // draw the diagram
+      draw(
+        diagram3,
+        sceneStatic,
+        normalLine,
+        incidentAnno,
+        refracAnno,
+        incidentRay.rotate(-incidentAngle),
+        refracRay.rotate(-refracAngle).opacity(transmittance),
+        reflecRay.rotate(incidentAngle).opacity(reflectance),
+        laserPointer.position(p).rotate(-incidentAngle),
+        tirAlert,
+        critLabel
+      );
+    };
+    interactive3.locator(
+      "p",
+      dg.V2(
+        -radius * Math.sin(dg.to_radian(45)),
+        -radius * Math.cos(dg.to_radian(45))
+      ),
+      0.05,
+      "blue",
+      waterTrack,
+      true
+    );
+    interactive3.draw();
+    interactive3.locator_initial_draw();
+
+    // --------------------- diagram 4 ------------------------- //
+    let diagram4 = document.getElementById("diagram4");
+    let control4 = document.getElementById("control4");
+    let interactive4 = new dg.Interactive(control4, diagram4);
+    interactive4.draw_function = (inp) => {
+      let p = inp["p"];
+      // snell's law calculation
+      let incidentAngle = Math.atan2(-p.x, p.y);
+      let refracAngle = Math.asin(
+        Math.sin(incidentAngle) * (airRefracIndex / waterRefracIndex)
+      );
+      // fresnel calculation assuming laser light is S-polarized relative to the plane of incident
+      let reflectance = Math.pow(
+        (airRefracIndex * Math.cos(incidentAngle) -
+          waterRefracIndex * Math.cos(refracAngle)) /
+          (airRefracIndex * Math.cos(incidentAngle) +
+            waterRefracIndex * Math.cos(refracAngle)),
+        2
+      );
+      let transmittance = 1 - reflectance;
+      // angle annotation
+      let incidentAnno = dg.annotation
+        .angle(
+          [dg.V2(0, 1), dg.V2(0, 0), p],
+          dg.to_degree(incidentAngle).toFixed(0).toString() + "°",
+          0.1,
+          0.06
+        )
+        .strokewidth(1);
+      let refracAnno = dg.annotation
+        .angle(
+          [
+            dg.V2(0, -1),
+            dg.V2(0, 0),
+            dg.V2(Math.sin(refracAngle), -Math.cos(refracAngle)),
+          ],
+          dg.to_degree(refracAngle).toFixed(0).toString() + "°",
+          0.1,
+          0.06
+        )
+        .strokewidth(1);
+      // draw the diagram
+      draw(
+        diagram4,
+        sceneStatic,
+        normalLine,
+        incidentAnno,
+        refracAnno,
+        incidentRay.rotate(Math.PI + incidentAngle),
+        refracRay.rotate(Math.PI + refracAngle).opacity(transmittance),
+        reflecRay.rotate(Math.PI - incidentAngle).opacity(reflectance),
+        laserPointer.position(p).rotate(Math.PI + incidentAngle)
+      );
+    };
+    interactive4.locator(
+      "p",
+      dg.V2(
+        -radius * Math.sin(dg.to_radian(60)),
+        radius * Math.cos(dg.to_radian(60))
+      ),
+      0.05,
+      "blue",
+      airTrack,
+      true
+    );
+    interactive4.draw();
+    interactive4.locator_initial_draw();
+  </script>
+
+  <style>
+    body {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-family: mitr, sans-serif;
+      font-size: 1.2em;
+      text-align: center;
+      color: #2469a5;
+    }
+    h2 {
+      font-family: mitr, sans-serif;
+      font-size: 1em;
+      color: #2469a5;
+    }
+    p {
+      font-family: mitr, sans-serif;
+      font-size: 1em;
+      color: #666666;
+    }
+    b {
+      color: #2469a5;
+    }
+    .box {
+      background-color: #f1f7fd;
+      border-radius: 14px;
+      max-width: 590px;
+      margin: 20px;
+      padding: 24px;
+    }
+    .diagram {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .svg {
+      width: 100%;
+      aspect-ratio: 1;
+    }
+    .control {
+      user-select: none;
+      touch-action: none;
+    }
+  </style>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive AVA Prototype</title>
+    <link
+      href="https://fonts.cdnfonts.com/css/latin-modern-math"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/diagramatics@1.5/css/diagramatics.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Mitr"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Interactive AVA Prototype (Projectile)</h1>
+    </header>
+    <article>
+      <div class="box">
+        <p>
+          ในเรื่องของโพรเจกไทล์ นอกจากการคำนวณแล้ว อีกหนึ่งสิ่งที่สำคัญมาก ๆ
+          และข้อสอบสามารถนำมาถามได้
+          คือคอนเซ็ปต์เกี่ยวกับความเร็วและความเร่งในระหว่างการเคลื่อนที่
+          ซึ่งเราจะมาทบทวนกันใน Guided Practice ชุดนี้ครับ <br />
+          <br />
+          Note : เราจะโฟกัสไปที่โพรเจกไทล์ซึ่งเคลื่อนที่เต็มเส้นทาง
+          (จากพื้นสู่พื้น) แบบในรูปนี้กันก่อนนะครับ
+        </p>
+        <div class="diagram">
+          <svg class="svg" id="diagram1"></svg>
+          <div class="control" id="control1"></div>
+        </div>
+      </div>
+      <div class="box">
+        <h2>Question 1</h2>
+        <p>
+          ในระหว่างการเคลื่อนที่แบบโพรเจกไทล์ ความเร่ง $a$
+          ที่เกิดขึ้นมีขนาดเท่าใด และมีทิศทางอย่างไร <br />
+          1. $a = g$ มีทิศชี้ลงตลอดการเคลื่อนที่ <br />
+          2. $a = g$ มีทิศชี้ขึ้นในช่วงแรก และชี้ลงในช่วงหลัง <br />
+          3. $a = 0$
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          ตอบ 1. $a = g$ มีทิศชี้ลงตลอดการเคลื่อนที่ <br />
+          <br />
+          คำอธิบาย <br />
+          ตลอดการเคลื่อนที่แบบโพรเจกไทล์
+          แรงเพียงแรงเดียวที่กระทำกับวัตถุคือแรงโน้มถ่วงของโลก
+          (ในบทนี้เราจะถือว่าไม่มีแรงต้านจากอากาศ)
+          ทำให้ความเร่งที่เกิดขึ้นคือความเร่งเนื่องจากแรงโน้มถ่วง หรือก็คือค่า
+          $g$ ที่เราคุ้นเคยกันจากเรื่องการตกอิสระนั่นเอง ซึ่งมีขนาดประมาณ $9.8
+          \text{ m/s²}$ และมีทิศชี้ลงสู่พื้นตลอดเวลา
+        </p>
+        <div class="diagram">
+          <svg class="svg" id="diagram2"></svg>
+          <div class="control" id="control2"></div>
+        </div>
+      </div>
+      <div class="box">
+        <p>
+          เมื่อเรารู้แล้วว่าตลอดการเคลื่อนที่ ความเร่งที่เกิดขึ้นคือ $a = g$
+          มีทิศชี้ลงตลอด
+          เราจะมาลองคิดกันต่อว่าความเร่งนี้จะมีผลทำให้ความเร็วของวัตถุเปลี่ยนแปลงอย่างไรบ้าง
+          <br />
+          <br />
+          ซึ่งถ้าน้อง ๆ จำกันได้ ในบทนี้เราจะทำการแยกความเร็วออกเป็น 2 ส่วน คือ
+          <br />
+          1. ความเร็วในแนวแกน $x$ หรือ $v_x$ <br />
+          2. ความเร็วในแนวแกน $y$ หรือ $v_y$
+        </p>
+        <div class="diagram">
+          <svg class="svg" id="diagram3"></svg>
+        </div>
+      </div>
+      <div class="box">
+        <h2>Question 2</h2>
+        <p>
+          ความเร่งในข้อ 1 ส่งผลต่อ $v_x$ อย่างไร <br />
+          1. ทำให้ $v_x$ เพิ่มขึ้น <br />
+          2. ทำให้ $v_x$ ลดลง <br />
+          3. ไม่ส่งผล ($v_x$ คงที่)
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          ตอบ 3. ไม่ส่งผล ($v_x$ คงที่) <br />
+          <br />
+          คำอธิบาย <br />
+          $v_x$ เป็นความเร็วในแนวระดับ
+          แต่ความเร่งเนื่องจากแรงโน้มถ่วงของโลกเกิดขึ้นในแนวดิ่งเท่านั้น <br />
+          ดังนั้น $v_x$ จะคงที่ไม่เปลี่ยนแปลงตลอดการเคลื่อนที่
+        </p>
+        <div class="diagram">
+          <svg class="svg" id="diagram4"></svg>
+          <div class="control" id="control4"></div>
+        </div>
+      </div>
+      <div class="box">
+        <h2>Question 3</h2>
+        <p>
+          ความเร่งในข้อ 1 ส่งผลต่อ $v_y$ อย่างไร <br />
+          1. ทำให้ขนาดของ $v_y$ เพิ่มขึ้นเรื่อย ๆ จนมากสุดที่จุดสูงสุด
+          และลดลงในช่วงหลังจากนั้น <br />
+          2. ทำให้ขนาดของ $v_y$ ลดลงเรื่อย ๆ จนเป็น $0$ ที่จุดสูงสุด
+          และเพิ่มขึ้นในช่วงหลังจากนั้น <br />
+          3. ไม่ส่งผล ($v_y$ คงที่)
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          ตอบ 2. ทำให้ขนาดของ $v_y$ ลดลงเรื่อย ๆ จนเป็น $0$ ที่จุดสูงสุด
+          และเพิ่มขึ้นในช่วงหลังจากนั้น <br />
+          <br />
+          คำอธิบาย <br />
+          ในช่วงแรกของการเคลื่อนที่ วัตถุมี $v_y$ ในทิศขึ้น แต่ความเร่งมีทิศลง
+          ทำให้ $v_y$ มีขนาดลดลงเรื่อย ๆ <br />
+          จนเมื่อ $v_y = 0$ วัตถุจะอยู่ที่จุดสูงสุดของการเคลื่อนที่
+          (โดยที่ความเร่งยังคงมีทิศลงเช่นเดิม) <br />
+          จากนั้นวัตถุจะเริ่มมี $v_y$ ในทิศลง (เคลื่อนที่ลง)
+          ซึ่งตรงกับทิศของความเร่ง ทำให้ $v_y$ มีขนาดเพิ่มขึ้นเรื่อย ๆ
+        </p>
+        <div class="diagram">
+          <svg class="svg" id="diagram5"></svg>
+          <div class="control" id="control5"></div>
+        </div>
+      </div>
+      <div class="box">
+        <h2>Question 4</h2>
+        <p>
+          ข้อใดกล่าวถูกต้องเกี่ยวกับความเร็วลัพธ์ $v$
+          ที่จุดสูงสุดของการเคลื่อนที่แบบโพรเจกไทล์
+          <br />
+          1. มีขนาดเป็น $0$ <br />
+          2. เท่ากับความเร็วในแนวระดับ (แกน $x$) เมื่อเริ่มเคลื่อนที่
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          ตอบ 2. เท่ากับความเร็วในแนวระดับ (แกน $x$) เมื่อเริ่มเคลื่อนที่ <br />
+          <br />
+          คำอธิบาย <br />
+          จากข้อก่อนหน้านี้ เราได้รู้มาแล้วว่า <br />
+          &nbsp;• $v_x$ คงที่ตลอดการเคลื่อนที่
+          (ซึ่งก็รวมทั้งที่จุดเริ่มต้นและที่จุดสูงสุดด้วย) <br />
+          &nbsp;• $v_y$ เป็น $0$ ที่จุดสูงสุด <br />
+          นั่นคือ ที่จุดสูงสุดวัตถุจะมีแต่ความเร็วในแนวระดับ (แกน $x$)
+          ไม่มีความเร็วในแนวดิ่ง (แกน $y$)
+          และความเร็วในแนวระดับที่จุดสูงสุดนี้ก็จะเท่ากับความเร็วในแนวระดับตอนที่เริ่มเคลื่อนที่ด้วย
+        </p>
+        <div class="diagram">
+          <svg class="svg" id="diagram6"></svg>
+          <div class="control" id="control6"></div>
+        </div>
+      </div>
+    </article>
+  </body>
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+      },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script type="module">
+    import * as dg from "https://cdn.jsdelivr.net/npm/diagramatics@latest/dist/diagramatics.js";
+
+    // handle MathJax
+    let handletex = (str, conf) => {
+      return MathJax.tex2svg(str, conf).innerHTML;
+    };
+
+    // shared parameters
+    let timeInterval = 6;
+    let uX = 24;
+    let uY = 30;
+    let g = -10;
+    let grdHeight = 8;
+    let grdWidth = 190;
+    let grdY = -22;
+    let grdX = 0;
+    let objectR = 4;
+    let startX = -88;
+    let startY = grdY + grdHeight / 2 + objectR;
+    let pathArray = [];
+    let pathNStep = 30;
+    for (let i = 0; i <= pathNStep; i++) {
+      pathArray.push(
+        dg.V2(
+          startX + (uX * i * timeInterval) / pathNStep,
+          startY +
+            (uY * i * timeInterval) / pathNStep +
+            0.5 * g * Math.pow((i * timeInterval) / pathNStep, 2)
+        )
+      );
+    }
+
+    // shared diagram components
+    let bg = dg.rectangle(190, 190 / 2).stroke("none");
+    let window = dg.rectangle(5, 3).fill("white").stroke("none");
+    let generateBuilding = (w, h, x, y, winRow, winCol) => {
+      let building = dg
+        .rectangle(w, h)
+        .stroke("none")
+        .fill("lightgrey")
+        .opacity(0.25)
+        .position(dg.V2(x, y));
+      let windows = [];
+      for (let i = 0; i < winRow; i++) {
+        for (let j = 0; j < winCol; j++) {
+          let win = window.position(
+            dg.V2(
+              x - 0.5 * w + (w / (winCol + 1)) * (j + 1),
+              y + 0.5 * h - ((0.86 * h) / (winRow + 1)) * (i + 1)
+            )
+          );
+          windows.push(win);
+        }
+      }
+
+      return dg.diagram_combine(building, ...windows);
+    };
+    let building1 = generateBuilding(30, 60, 76, 10, 5, 2);
+    let building2 = generateBuilding(60, 25, 20, -8, 2, 4);
+    let building3 = generateBuilding(26, 40, -60, -2, 3, 2);
+    let ground = dg
+      .rectangle(grdWidth, grdHeight)
+      .fill("lightgrey")
+      .stroke("none")
+      .position(dg.V2(grdX, grdY));
+    let diagramStatic = dg.diagram_combine(
+      bg,
+      ground,
+      building1,
+      building2,
+      building3
+    );
+    let arrowHead = dg
+      .polygon([dg.V2(1, 0), dg.V2(-3, 2), dg.V2(-3, -2)])
+      .fill("lightgray")
+      .stroke("none");
+    let path = dg
+      .curve(pathArray)
+      .strokedasharray([6, 8])
+      .stroke("lightgray")
+      .apply(dg.mod.add_arrow(1))
+      .apply(dg.mod.arrowhead_replace(arrowHead));
+    let object = dg.circle(objectR).fill("lightblue").stroke("black");
+    let gVect = dg.annotation
+      .vector(dg.V2(0, g), "$g$", dg.V2(4, 4), 3)
+      .stroke("red")
+      .fill("red");
+    let vXVect = dg.annotation
+      .vector(dg.V2(uX, 0), "$v_x$", dg.V2(4, 0), 3)
+      .stroke("blue")
+      .fill("blue");
+
+    // --------------------- diagram 1 ------------------------- //
+    let diagram1 = document.getElementById("diagram1");
+    let control1 = document.getElementById("control1");
+    let interact1 = new dg.Interactive(control1, diagram1);
+
+    interact1.draw_function = (inp) => {
+      let t = inp["t"];
+
+      let position = dg.V2(startX + uX * t, startY + uY * t + 0.5 * g * t * t);
+      let ball = object.position(position);
+
+      dg.draw_to_svg_element(
+        diagram1,
+        dg.diagram_combine(diagramStatic, path, ball)
+      );
+    };
+
+    interact1.slider("t", 0, timeInterval, 0, 0.01, timeInterval);
+    interact1.draw();
+
+    // --------------------- diagram 2 ------------------------- //
+    let diagram2 = document.getElementById("diagram2");
+    let control2 = document.getElementById("control2");
+    let interact2 = new dg.Interactive(control2, diagram2);
+
+    interact2.draw_function = (inp) => {
+      let t = inp["t"];
+
+      let position = dg.V2(startX + uX * t, startY + uY * t + 0.5 * g * t * t);
+      let ball = object.position(position);
+      let gArrow = gVect.position(position);
+
+      dg.draw_to_svg_element(
+        diagram2,
+        dg.diagram_combine(diagramStatic, path, ball, gArrow)
+      );
+      dg.handle_tex_in_svg(diagram2, handletex);
+    };
+
+    interact2.slider("t", 0, timeInterval, 0, 0.01, timeInterval);
+    interact2.draw();
+
+    // --------------------- diagram 3 ------------------------- //
+    let diagram3 = document.getElementById("diagram3");
+
+    let position = dg.V2(-20, -8);
+    let ball = dg
+      .circle(8)
+      .fill("lightblue")
+      .stroke("black")
+      .position(position);
+    let vYArrow = dg.annotation
+      .vector(dg.V2(0, uY), "$v_y$", dg.V2(4, 2), 3)
+      .stroke("blue")
+      .fill("blue")
+      .position(position);
+    let vXArrow = dg.annotation
+      .vector(dg.V2(uX * 2, 0), "$v_x$", dg.V2(4, 2), 3)
+      .stroke("blue")
+      .fill("blue")
+      .position(position);
+
+    dg.draw_to_svg_element(
+      diagram3,
+      dg.diagram_combine(bg, vYArrow, vXArrow, ball)
+    );
+    dg.handle_tex_in_svg(diagram3, handletex);
+
+    // --------------------- diagram 4 ------------------------- //
+    let diagram4 = document.getElementById("diagram4");
+    let control4 = document.getElementById("control4");
+    let interact4 = new dg.Interactive(control4, diagram4);
+
+    interact4.draw_function = (inp) => {
+      let t = inp["t"];
+
+      let position = dg.V2(startX + uX * t, startY + uY * t + 0.5 * g * t * t);
+      let ball = object.position(position);
+      let gArrow = gVect.position(position);
+      let vXArrow = vXVect.position(position);
+
+      dg.draw_to_svg_element(
+        diagram4,
+        dg.diagram_combine(diagramStatic, path, ball, gArrow, vXArrow)
+      );
+      dg.handle_tex_in_svg(diagram4, handletex);
+    };
+
+    interact4.slider("t", 0, timeInterval, 0, 0.01, timeInterval);
+    interact4.draw();
+
+    // --------------------- diagram 5 ------------------------- //
+    let diagram5 = document.getElementById("diagram5");
+    let control5 = document.getElementById("control5");
+    let interact5 = new dg.Interactive(control5, diagram5);
+
+    interact5.draw_function = (inp) => {
+      let t = inp["t"];
+
+      let position = dg.V2(startX + uX * t, startY + uY * t + 0.5 * g * t * t);
+      let ball = object.position(position);
+      let gArrow = gVect.position(position);
+      let vYArrow = dg.annotation
+        .vector(dg.V2(0, uY + g * t), "$v_y$", dg.V2(4, 2), 3)
+        .stroke("blue")
+        .fill("blue")
+        .position(position);
+
+      dg.draw_to_svg_element(
+        diagram5,
+        dg.diagram_combine(diagramStatic, path, ball, gArrow, vYArrow)
+      );
+      dg.handle_tex_in_svg(diagram5, handletex);
+    };
+
+    interact5.slider("t", 0, timeInterval, 0, 0.01, timeInterval);
+    interact5.draw();
+
+    // --------------------- diagram 6 ------------------------- //
+    let diagram6 = document.getElementById("diagram6");
+    let control6 = document.getElementById("control6");
+    let interact6 = new dg.Interactive(control6, diagram6);
+
+    interact6.draw_function = (inp) => {
+      let t = inp["t"];
+
+      let position = dg.V2(startX + uX * t, startY + uY * t + 0.5 * g * t * t);
+      let ball = object.position(position);
+      let vertDash = dg
+        .curve([dg.V2(uX, 0), dg.V2(uX, uY + g * t)])
+        .strokedasharray([5, 5])
+        .stroke("blue")
+        .position(position);
+      let horDash = dg
+        .curve([dg.V2(0, uY + g * t), dg.V2(uX, uY + g * t)])
+        .strokedasharray([5, 5])
+        .stroke("blue")
+        .position(position);
+      let vXArrow = vXVect.position(position);
+      let vYArrow = dg.annotation
+        .vector(dg.V2(0, uY + g * t), "$v_y$", dg.V2(4, 2), 3)
+        .stroke("blue")
+        .fill("blue")
+        .position(position);
+      let vArrow = dg.annotation
+        .vector(dg.V2(uX, uY + g * t), "$v$", dg.V2(4, 2), 3)
+        .stroke("black")
+        .fill("black")
+        .position(position);
+
+      dg.draw_to_svg_element(
+        diagram6,
+        dg.diagram_combine(
+          diagramStatic,
+          path,
+          ball,
+          vXArrow,
+          vYArrow,
+          vertDash,
+          horDash,
+          vArrow
+        )
+      );
+      dg.handle_tex_in_svg(diagram6, handletex);
+    };
+
+    interact6.slider("t", 0, timeInterval, 0, 0.01, timeInterval);
+    interact6.draw();
+  </script>
+
+  <style>
+    body {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-family: mitr, sans-serif;
+      font-size: 1.2em;
+      text-align: center;
+      color: #2469a5;
+    }
+    h2 {
+      font-family: mitr, sans-serif;
+      font-size: 1em;
+      color: #2469a5;
+    }
+    p {
+      font-family: mitr, sans-serif;
+      font-size: 1em;
+      color: #666666;
+    }
+    .box {
+      background-color: #f1f7fd;
+      border-radius: 14px;
+      max-width: 800px;
+      margin: 20px;
+      padding: 24px;
+    }
+    .diagram {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+    }
+    .svg {
+      width: 100%;
+      aspect-ratio: 2;
+      margin: 0 0 -30px 0;
+    }
+    .control {
+      margin-bottom: 20px;
+      user-select: none;
+      touch-action: none;
+    }
+  </style>
+</html>
