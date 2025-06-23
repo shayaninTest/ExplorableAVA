@@ -346,7 +346,7 @@
     interactive1.locator_initial_draw();
     setTimeout(() => {
       interactive1.draw();
-    }, 1000);
+    }, 50);
 
     // --------------------- diagram 2 ------------------------- //
     let diagram2 = document.getElementById("diagram2");
@@ -418,7 +418,10 @@
       true
     );
     interactive2.draw();
-    // interactive2.locator_initial_draw();
+    interactive2.locator_initial_draw();
+    setTimeout(() => {
+      interactive2.draw();
+    }, 50);
 
     // --------------------- diagram 3 ------------------------- //
     let diagram3 = document.getElementById("diagram3");
@@ -501,6 +504,9 @@
     );
     interactive3.draw();
     interactive3.locator_initial_draw();
+    setTimeout(() => {
+      interactive3.draw();
+    }, 50);
 
     // --------------------- diagram 4 ------------------------- //
     let diagram4 = document.getElementById("diagram4");
@@ -569,6 +575,10 @@
     );
     interactive4.draw();
     interactive4.locator_initial_draw();
+    interactive4.draw();
+    // setTimeout(() => {
+    //   interactive4.draw();
+    // }, 50);
   </script>
 
   <style>
