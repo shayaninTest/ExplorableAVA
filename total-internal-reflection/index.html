@@ -344,6 +344,9 @@
     );
     interactive1.draw();
     interactive1.locator_initial_draw();
+    setTimeout(() => {
+      interactive1.draw();
+    }, 1000);
 
     // --------------------- diagram 2 ------------------------- //
     let diagram2 = document.getElementById("diagram2");
